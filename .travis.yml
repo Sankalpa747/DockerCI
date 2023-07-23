@@ -1,0 +1,9 @@
+# Give commands to the Travis CI engine to run Docker and build the application
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t sankalpa/simple-backend .
+  - docker images sankalpa/simple-backend
+  
